@@ -45,6 +45,32 @@ res.status(201).json({
 })
 })
 
+app.post('/users',(req,res)=>{
+
+    const { name, age } = req.body
+
+    if(!name || age === undefined){
+        return res.status(400).json({
+            message: 'Name and age are required'
+        })
+    }else if(typeof name !== 'string'){
+        return res.status(400).json({
+            message: "Name must be a string"
+        })
+    }else if(typeof age !== 'number'){
+        return res.status(400).json({
+            message: 'Age must be a number'
+        })
+    }
+    res.status(201).json({
+        message: 'User created successfully',
+        user: {
+            name,
+            age
+        }
+    })
+})
+
 app.listen(port,'localhost',()=>{
     console.log(`Server is running on http://localhost:${port}`);
 })
