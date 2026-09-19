@@ -1,5 +1,5 @@
 {
-  "name": "day4",
+  "name": "backend-90-days",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,9 +8,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
     "express": "^5.2.1"
-  },
-  "devDependencies": {},
-  "description": ""
+  }
 }
